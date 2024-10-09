@@ -1,6 +1,5 @@
 # The Expanse: Creating R Packages for Statisticians
 
-======
 
 ### r/pharma 2024
 
