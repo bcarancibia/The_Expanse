@@ -1,24 +1,39 @@
 ---
 title: "R Packages and Engineering Workflow"
-format: revealjs
-editor: visual
+subtitle: "Good Software Engineering Practices"
+format:
+  revealjs: 
+    slide-number: true
 ---
 
-## Quarto
+## Most of us use packages
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+- Packages help us load optional code, data, and documentation
+- A library is a directory into which packages are installed
+- `install.packages()` is used to install packages into the library
+- `library()` is used to load and attach packages from the library
+- Remember that **package $\neq$ library**
 
-## Bullets
+## Review: How is a Package Structured?
 
-When you click the **Render** button a document will be generated that includes:
+Package source = directory with files and subdirectories
 
--   Content authored with markdown
--   Output from executable code
+::: columns
+::: {.column width="50%"}
+- Mandatory:
+  - DESCRIPTION
+  - NAMESPACE
+  - R
+  - man
+:::
 
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
+::: {.column width="50%"}
+- Typically also includes:
+  - data
+  - inst
+  - src
+  - tests
+  - vignettes
+  - NEWS
+:::
+:::
