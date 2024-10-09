@@ -34,7 +34,24 @@ Putting R code in a package is the best way to share our code with others or to 
 
 This workshop assumes you have done or familiar with package development, i.e. you have created a basic package or that you have read the [R Packages book](https://r-pkgs.org)
 
+If you attended Jenny Bryan's "How to draw an Owl" or "Drawing the Rest of the Owl", this workshop will focus on learning how to add color to the owl. It builds on understanding R packages, and explaining nuances of working on R packages with Statisticians.
+
+This list of topics include both technical and non technical areas to explore.
+
+- Level Setting Knowledge
+- Engineering Workflows 
+- Culture of Collaboration
+- Quality and Testing: Correct Outputs vs Statistically Correct
+
+
 ## Audience
 
+This course is for you if you:
+
+-   Are very comfortable writing R scripts and functions.
+-   Have already created a basic package, e.g., you've successfully worked through [The Whole Game chapter from R Packages](https://r-pkgs.org/whole-game.html) or have equivalent experience. You should also be able to follow the story in [The package within](https://r-pkgs.org/package-within.html) chapter.
+-   Are interesting in building a Statistics focused R Package
+  
 ## Instructor
 
+* Ben Arancibia (instructor) is a Director of Data Science at GSK, working on R enablement for the Biostatistics department including training and building tools. Member of the R Consortium Board of Directors. Recently helped build [{beastt}](https://github.com/GSK-Biostatistics/beastt) an R package focused on Bayesian Dynamic Borrowing (BDB).
