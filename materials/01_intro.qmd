@@ -1,0 +1,31 @@
+---
+title: "Introduction"
+subtitle: "Introduction and Level Setting"
+format:
+  revealjs: 
+    slide-number: true
+---
+
+## Disclaimer
+
+</br></br></br>
+
+*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
+
+## Hello!
+
+::: columns
+::: {.column width="30%"}
+![](The_Expanse/img/ben.jpg)
+:::
+
+::: {.column width="70%"}
+-   BA in Quantitative Economics and Environmental Science, MSc in Data Science
+-   Data Scientist and open-source advocate, Director of Data Science GSK for 4.5 years, Data Scientist at Booz Allen Hamilton for 6 years, and Data Scientist at Development Gateway for 3 Years
+-   Recently contributed {beastt} to CRAN and on Board of Directors of R Consortium
+-   Feel free to connect
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/bcarancibia/)
+    [`r fontawesome::fa("github")`](https://github.com/bcarancibia)
+:::
+:::
+
