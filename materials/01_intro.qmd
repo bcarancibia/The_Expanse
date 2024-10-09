@@ -12,20 +12,91 @@ format:
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
-## Hello!
+## Hello! {.smaller}
 
 ::: columns
 ::: {.column width="30%"}
-![](The_Expanse/img/ben.jpg)
+![](images/ben.jpg)
 :::
 
 ::: {.column width="70%"}
--   BA in Quantitative Economics and Environmental Science, MSc in Data Science
+-   BA in Quantitatve Econ and Geospatial Analysis, MSc in Data Science
 -   Data Scientist and open-source advocate, Director of Data Science GSK for 4.5 years, Data Scientist at Booz Allen Hamilton for 6 years, and Data Scientist at Development Gateway for 3 Years
 -   Recently contributed {beastt} to CRAN and on Board of Directors of R Consortium
--   Feel free to connect
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/bcarancibia/)
+-   Feel free to connect 
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/bcarancibia/) 
     [`r fontawesome::fa("github")`](https://github.com/bcarancibia)
 :::
 :::
+
+## `openstatsware` {.smaller}
+
+::: columns
+::: {.column width="70%"}
+- [openstatsware.org](https://openstatsware.org)
+- Since: 19 August 2022 - more than 2 years now!
+- Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
+- Who: Currently more than 50 statisticians from more than 30 organizations
+- What: Engineer packages and spread best practices
+:::
+
+::: {.column width="30%"}
+![](https://raw.githubusercontent.com/RConsortium/asa-biop-swe-wg/main/sticker/openstatsware-hex.svg){height="300"}
+:::
+:::
+
+## What we are going to Cover
+
+-   Engineering Workflows
+-   Culture of Collaboration
+-   Quality and Testing
+
+## House Rules {.smaller}
+
+- Course materials are here: https://github.com/bcarancibia/The_Expanse
+  - All slides
+  - Fork it, Clone it, Make issues - do what you want!
+- No question is dumb, if you don't know it ask it
+  - I might not know the answer, rely on everybody here
+  - We are all here to learn, if we want to focus on a specific topic, let's decide as a group
+- Put in the chat
+  - Name
+  - Organization
+  - What do you want to learn
+  - Favorite music
+
+##  {background-iframe="https://pharmaverse.org/" background-interactive="true"}
+
+## Pharma perspective: GxP + R `r fontawesome::fa("cube")` = `r fontawesome::fa("heart")` {.smaller}
+
+-   Core infrastructure packages only through industry
+-   Quality, burden sharing: open-source [pharmaverse](https://pharmaverse.org/) and [openstatsware](https://openstatsware.org)
+-   Open methodological packages can de-risk innovative methods
+-   R packages make (statistical/methodological) code
+    -   testable (with documented evidence thereof, [CFR Part 11](https://en.wikipedia.org/wiki/Title_21_CFR_Part_11))
+    -   reusable
+    -   shareable
+    -   easier to document
+
+## Basics of R Packages{.smaller}
+
+What leads to a package - starting small with a script building from there
+
+1.  Encapsulate behavior (functions)
+2.  Avoid global state/variables
+3.  Adopt consistent coding style
+4.  Document well
+5.  Add test cases
+6.  Refactor and optimize code
+7.  Version your code
+8.  Share as 'bundle'
+
+
+
+
+
+
+
+
+
 
