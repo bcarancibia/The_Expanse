@@ -37,3 +37,60 @@ Package source = directory with files and subdirectories
   - NEWS
 :::
 :::
+
+## What is a good workflow?
+
+## Typical work steps
+
+::: incremental
+::: columns
+::: {.column width="55%"}
+1.  Idea
+2.  Concept creation
+3.  Validation planning
+4.  Specification:
+      a. User Requirements Spec (URS), 
+      b. Functional Spec (FS), and 
+      c. Software Design Spec (SDS)
+:::
+
+::: {.column width="45%"}
+5.  R package programming
+6.  Documented verification
+7.  Completion of formal validation
+8.  R package release
+9.  Use in production
+10. Maintenance
+:::
+:::
+:::
+
+## But we all know it's not this clean...
+
+
+## Frequently Used Workflow in Practice
+
+::: incremental
+::: columns
+::: {.column width="50%"}
+1.  Idea
+2.  R package programming
+3.  Use in production
+4.  Bug fixing
+5.  Use in production
+:::
+
+::: {.column width="50%"}
+6.  Bug fixing + Documentation
+7.  Use in production
+8.  Bug fixing + Further development
+9.  Use in production
+10. Bug fixing + ...
+:::
+:::
+:::
+
+
+
+
+
