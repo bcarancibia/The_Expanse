@@ -90,7 +90,95 @@ Package source = directory with files and subdirectories
 :::
 :::
 
+## Why practice good engineering?
 
+<!-- https://www.researchgate.net/figure/Cost-Distribution-among-Software-Process-Activities-12_fig1_340280214 -->
 
+```{r, echo = FALSE, eval = TRUE, render = TRUE, fig.cap = "Cost distribution among software process activities", fig.subcap = "[doi:10.14569/IJACSA.2020.0110375](https://dx.doi.org/10.14569/IJACSA.2020.0110375)"}
+library("ggplot2") 
+library("dplyr")
+classes <- c("Design (12%)", "Coding (6%)", "Testing (12%)", "Maintenance (70%)")
+effortData <- data.frame(
+  id = 1:4,
+  class = classes,
+  prop = c(12, 6, 12, 70)
+)
 
+effortData$class <- factor(effortData$class, levels = classes)
 
+effortData <- effortData %>%
+  arrange(desc(class)) %>%
+  mutate(lab.ypos = cumsum(prop) - 0.5*prop) %>%
+  arrange(desc(id))
+
+mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF")
+
+ggplot(effortData, aes(x = "", y = prop, fill = class)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = -32) +
+  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
+  scale_fill_manual(values = mycols) + 
+  labs(fill = "Activity") +
+  theme_void()
+```
+## Why practice good engineering?
+
+```{r, echo = FALSE, eval = TRUE, render = TRUE, fig.cap = "Origin of errors in system development", fig.subcap = "[Boehm, B. (1981). Software Engineering Economics. Prentice Hall.](https://dl.acm.org/doi/10.5555/539425)"}
+library("ggplot2") 
+library("dplyr")
+classes <- c("Analysis Errors (60%)", "Design and Implementation Errors (40%)")
+effortData <- data.frame(
+  id = 1:2,
+  class = classes,
+  prop = c(60, 40)
+)
+
+effortData$class <- factor(effortData$class, levels = classes)
+
+effortData <- effortData %>%
+  arrange(desc(class)) %>%
+  mutate(lab.ypos = cumsum(prop) - 0.5*prop) %>%
+  arrange(desc(id))
+
+mycols <- c("#CD534CFF", "#0073C2FF")
+
+ggplot(effortData, aes(x = "", y = prop, fill = class)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = -32) +
+  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
+  scale_fill_manual(values = mycols) + 
+  labs(fill = "Activity") +
+  theme_void()
+```
+
+## Why practice good engineering?
+
+::: columns
+::: {.column width="45%"}
+-   Don't waste time on maintenance
+-   Be faster with release on CRAN
+-   Don't waste time with inefficient and buggy further development
+:::
+
+::: {.column width="55%"}
+-   Fulfill regulatory requirements[^1]
+-   Save refactoring time when the Proof-of-Concept (*PoC*) becomes the release version
+-   You don't have to be shy any longer about inviting other developers to
+    contribute to the package on [GitHub](https://github.com/)
+:::
+:::
+
+[^1]: See also [Ensuring Quality](04_quality.html)
+
+## Why practice good engineering?
+
+Invest time in
+
+-   requirements analysis,
+-   software design, and
+-   architecture...
+
+. . .
+
+... but in many cases the workflow must be workable for a single developer or a
+small team.

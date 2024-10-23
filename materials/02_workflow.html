@@ -427,10 +427,56 @@
 </div>
 </div>
 </div>
+</section>
+<section id="why-practice-good-engineering" class="slide level2">
+<h2>Why practice good engineering?</h2>
+<!-- https://www.researchgate.net/figure/Cost-Distribution-among-Software-Process-Activities-12_fig1_340280214 -->
+<div class="cell">
+
+<p>Cost distribution among software process activities</p>
+</div>
+<img data-src="02_workflow_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://dx.doi.org/10.14569/IJACSA.2020.0110375">doi:10.14569/IJACSA.2020.0110375</a></p></section>
+<section id="why-practice-good-engineering-1" class="slide level2">
+<h2>Why practice good engineering?</h2>
+<div class="cell">
+
+<p>Origin of errors in system development</p>
+</div>
+<img data-src="02_workflow_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://dl.acm.org/doi/10.5555/539425">Boehm, B. (1981). Software Engineering Economics. Prentice Hall.</a></p></section>
+<section id="why-practice-good-engineering-2" class="slide level2">
+<h2>Why practice good engineering?</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li>Don’t waste time on maintenance</li>
+<li>Be faster with release on CRAN</li>
+<li>Don’t waste time with inefficient and buggy further development</li>
+</ul>
+</div><div class="column" style="width:55%;">
+<ul>
+<li>Fulfill regulatory requirements<sup>1</sup></li>
+<li>Save refactoring time when the Proof-of-Concept (<em>PoC</em>) becomes the release version</li>
+<li>You don’t have to be shy any longer about inviting other developers to contribute to the package on <a href="https://github.com/">GitHub</a></li>
+</ul>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>See also <a href="04_quality.html">Ensuring Quality</a></p></li></ol></aside></section>
+<section id="why-practice-good-engineering-3" class="slide level2">
+<h2>Why practice good engineering?</h2>
+<p>Invest time in</p>
+<ul>
+<li>requirements analysis,</li>
+<li>software design, and</li>
+<li>architecture…</li>
+</ul>
+<div class="fragment">
+<p>… but in many cases the workflow must be workable for a single developer or a small team.</p>
 <div class="footer footer-default">
 
 </div>
+</div>
 </section>
+
     </div>
   </div>
 
@@ -642,6 +688,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
