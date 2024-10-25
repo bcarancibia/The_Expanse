@@ -6,21 +6,28 @@ format:
     slide-number: true
 ---
 
-## Quarto
+## Trade-offs in code development
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+</br>
 
-## Bullets
+::: columns
+::: {.column width="50%"}
+### Working alone
 
-When you click the **Render** button a document will be generated that includes:
+-   no coordination overhead
+-   no review
+-   lack of diversity
+-   can slack on documentation
+-   fragile long-term maintenance
+:::
 
--   Content authored with markdown
--   Output from executable code
+::: {.column width="50%"}
+### Working in a team
 
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
+-   coordination overhead
+-   mutual review of code
+-   different approaches
+-   forced to document
+-   more robust long-term maintenance
+:::
+:::
